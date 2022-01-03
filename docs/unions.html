@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="mael.conan" />
+  <title>Unions</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="style.css" />
+<style type="text/css">
+  :root {
+/*
+  --color: #2096ba;
+  --color-secondary: #2096ba;
+  --color-accent: #f7f8fa;
+  --color-text: #222426;
+  --color-shadow: #c5d2db;
+  --width-content: 720px;
+  }
+*/
+  
+  code, samp {
+    font-size: 1.2em;
+  }
+
+  nav {
+    justify-content: space-evenly;
+  }
+
+  
+  a:hover {
+    filter: none;
+    color: #df6e21;
+  }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+  <nav id="TOC">
+      <a href="/jour1"><img alt="Logo" src="https://avatars.githubusercontent.com/u/96961500?s=200&amp;v=4" height="70"></a>
+            <ul>
+          <li><a href="#">Navigation</a>
+            <ul>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#variant-display">Variant display</a></li>
+            <li><a href="#equal">Equal</a></li>
+            <li><a href="#find">Find</a></li>
+            <li><a href="#is-sorted">Is sorted</a></li>
+            <li><a href="#sum">Sum</a></li>
+            </ul>
+          </li>
+      </ul>
+        </nav>
+<h1 class="title">Unions</h1>
+<p class="author">mael.conan</p>
+</header>
+<main>
+<hr>
+<article>
+<h1 id="goal">Goal</h1>
+<p>The goal of these exercises is to make you familiar with concept of unions, and how to handle it properly.</p>
+<p>Here is a variant which contains an union and an enum that represents the current field of the union.</p>
+<pre class="c"><code>enum type
+{
+    TYPE_INT,
+    TYPE_FLOAT,
+    TYPE_CHAR,
+    TYPE_STRING
+};
+
+union type_any
+{
+    int int_v;
+    float float_v;
+    char char_v;
+    const char *str_v;
+};
+
+struct variant
+{
+    enum type type;
+    union type_any value;
+};</code></pre>
+<p>You’ll have to write some functions using this variant.</p>
+<h1 id="variant-display">Variant display</h1>
+<p>Write a function that will print the content of the variant, followed by a line break.</p>
+<pre class="c"><code>void variant_display(const struct variant *v);</code></pre>
+<h1 id="equal">Equal</h1>
+<p>Write a function if two variants have the same value <strong>and</strong> the same content.</p>
+<p>`<code>c int variant_equal(const struct variant *first, const struct variant *second);</code></p>
+<h1 id="find">Find</h1>
+<p>Write a function that will look for an element in a variant array and returns the number of occurences of the element in the array.</p>
+<pre class="c"><code>size_t variant_find(const struct variant *array, size_t len, enum type type,
+                 union type_any value);</code></pre>
+<h1 id="is-sorted">Is sorted</h1>
+<p>Write a function that will check if an array of variants is sorted. You must convert the data types if they are not the same without explicit cast.</p>
+<pre class="c"><code>int variant_is_sorted(const struct variant *array, size_t len);</code></pre>
+<p>If the content of a variant is a string, look at</p>
+<pre class="sh"><code>man atoi</code></pre>
+<p>in order to convert the string.</p>
+<h1 id="sum">Sum</h1>
+<p>Write a function that returns the sum of the elements in a variant array.</p>
+<pre class="c"><code>int variant_sum(const struct variant *array, size_t len);</code></pre>
+<hr>
+</article>
+</main>
+</body>
+</html>p
