@@ -45,7 +45,8 @@
             <ul>
           <li><a href="#">Navigation</a>
             <ul>
-            <li><a href="#todo">TODO</a></li>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#declare-and-set">Declare and set</a></li>
             </ul>
           </li>
       </ul>
@@ -56,7 +57,25 @@
 <main>
 <hr>
 <article>
-<h1 id="todo">TODO</h1>
+<h1 id="goal">Goal</h1>
+<p>The goal of these exercises in to make you comfortable with the concept of macros, to be able to use the operators and to produce generic code.</p>
+<h1 id="declare-and-set">Declare and set</h1>
+<p>Write a macro that will declare and set 3 variables:</p>
+<pre class="c"><code>DECLARE_AND_SET(TYPE, NAME, VALUE)</code></pre>
+<p>The 3 variables will be:</p>
+<ul>
+<li>A var with the given type, name and value,</li>
+<li>A pointer on the first variable, with ptr_NAME as its name,</li>
+<li>A string of the given value, with str_NAME as its name.</li>
+</ul>
+<p>Here is an example:</p>
+<pre class="c"><code>DECLARE_AND_SET(float, asm, 4.2);
+/*
+** Should create:
+** float asm = 4.2;
+** float *ptr_asm = &amp;asm;
+** char *str_asm = &quot;4.2&quot;;
+*/</code></pre>
 <hr>
 </article>
 </main>

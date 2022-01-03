@@ -91,7 +91,7 @@ struct variant
 <pre class="c"><code>void variant_display(const struct variant *v);</code></pre>
 <h1 id="equal">Equal</h1>
 <p>Write a function if two variants have the same value <strong>and</strong> the same content.</p>
-<p>`<code>c int variant_equal(const struct variant *first, const struct variant *second);</code></p>
+<pre class="c"><code>int variant_equal(const struct variant *first, const struct variant *second);</code></pre>
 <h1 id="find">Find</h1>
 <p>Write a function that will look for an element in a variant array and returns the number of occurences of the element in the array.</p>
 <pre class="c"><code>size_t variant_find(const struct variant *array, size_t len, enum type type,
