@@ -48,7 +48,7 @@ void variant_display(const struct variant *v);
 
 Write a function if two variants have the same value **and** the same content.
 
-````c
+```c
 int variant_equal(const struct variant *first, const struct variant *second);
 ```
 
