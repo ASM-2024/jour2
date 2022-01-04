@@ -4,6 +4,10 @@ author: mael.conan
 logo: https://avatars.githubusercontent.com/u/96961500?s=200&v=4
 ---
 
+# Download
+
+[skeleton](practical/variant.tar.gz)
+
 # Goal
 
 The goal of these exercises is to make you familiar with concept of unions, and how to handle it properly.
