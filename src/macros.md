@@ -4,6 +4,10 @@ author: mael.conan
 logo: https://avatars.githubusercontent.com/u/96961500?s=200&v=4
 ---
 
+# Download
+
+[skeleton](practical/macros.tar.gz)
+
 # Goal
 
 The goal of these exercises in to make you comfortable with the concept of macros, to be able to use the operators and to produce generic code.
