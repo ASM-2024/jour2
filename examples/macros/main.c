@@ -8,6 +8,8 @@
 
 #define NAME(VAR) #VAR
 
+#define VERBOSE_DEBUG
+
 // Take a look at the `debug` target in the Makefile!
 #ifdef VERBOSE_DEBUG
 #define DBG(FMT, ...)                                                          \

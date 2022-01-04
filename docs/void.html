@@ -45,7 +45,11 @@
             <ul>
           <li><a href="#">Navigation</a>
             <ul>
-            <li><a href="#todo">TODO</a></li>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#get-item">Get item</a></li>
+            <li><a href="#set-item">Set item</a></li>
+            <li><a href="#compare-items">Compare items</a></li>
+            <li><a href="#functional-bubble-sort">Functional Bubble Sort</a></li>
             </ul>
           </li>
       </ul>
@@ -56,7 +60,32 @@
 <main>
 <hr>
 <article>
-<h1 id="todo">TODO</h1>
+<h1 id="goal">Goal</h1>
+<p>The goal of these exercises is to make you familiar with the concept of void pointers, and how to use them properly.</p>
+<p>Here is a simple struct using a pointer to a void array.</p>
+<pre class="c"><code>struct void_arr
+{
+    void *data;
+    // Size of each item
+    size_t smemb;
+    // Number of items
+    size_t nmemb;
+};</code></pre>
+<h1 id="get-item">Get item</h1>
+<p>Write a function that will get the <code>n</code>th item of the array.</p>
+<pre class="c"><code>void *get_item(struct void_arr *arr, size_t index);</code></pre>
+<p>The function should return NULL if the index is out of bounds.</p>
+<h1 id="set-item">Set item</h1>
+<p>Write a function that will set the value of an element of the list to the first <code>smemb</code> bytes of the data pointed to by <code>elem</code>.</p>
+<pre class="c"><code>void set_item(struct void_arr *arr, void *elem);</code></pre>
+<h1 id="compare-items">Compare items</h1>
+<p>Write a function that will compare two elements byte per byte.</p>
+<pre class="c"><code>int compare(struct void_arr *arr, size_t item, size_t other);</code></pre>
+<p>The function should return a positive value if <code>item</code> &gt; <code>other</code>, a negative value if <code>item</code> &lt; <code>other</code> and <code>0</code> if the items are exactly equal.</p>
+<h1 id="functional-bubble-sort">Functional Bubble Sort</h1>
+<p>Write a function that will bubble sort the array based on the comparison function passed as argument.</p>
+<pre class="c"><code>struct void_arr *bubble_sort(struct void_arr *arr, int (*compare) (void *item, void *other));</code></pre>
+<p>The function should return a pointer to the start of the array.</p>
 <hr>
 </article>
 </main>
