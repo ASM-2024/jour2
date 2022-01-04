@@ -6,7 +6,7 @@ logo: https://avatars.githubusercontent.com/u/96961500?s=200&v=4
 
 # Download
 
-[skeleton](practical/macros.tar.gz)
+[skeleton](macros.tar.gz)
 
 # Goal
 
