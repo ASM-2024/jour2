@@ -36,7 +36,7 @@ The function should return NULL if the index is out of bounds.
 Write a function that will set the value of an element of the list to the first `smemb` bytes of the data pointed to by `elem`.
 
 ```c
-void set_item(struct void_arr *arr, void *elem);
+void set_item(struct void_arr *arr, void *elem, size_t index);
 ```
 
 # Compare items
