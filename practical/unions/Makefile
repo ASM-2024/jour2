@@ -3,6 +3,9 @@ CFLAGS=-Wall -Wextra  -std=c99 -pedantic
 
 SRC=$(wildcard *.c)
 
+.PHONY:
+	clean	
+
 main:
 	$(CC) $(CFLAGS) $(SRC) -o main
 

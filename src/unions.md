@@ -8,6 +8,13 @@ logo: https://avatars.githubusercontent.com/u/96961500?s=200&v=4
 
 [skeleton](unions.tar.gz)
 
+# Correction
+
+Here is an example of correction. It is not the only one nor the best one, just a simple correction.
+Some tests are added in the main.c file as well.
+
+[correction](unions_correction.tar.gz)
+
 # Goal
 
 The goal of these exercises is to make you familiar with concept of unions, and how to handle it properly.

@@ -8,6 +8,12 @@ logo: https://avatars.githubusercontent.com/u/96961500?s=200&v=4
 
 [skeleton](macros.tar.gz)
 
+# Correction
+
+Here is a possible correction of the exercise. There is a simple print of the variables as well.
+
+[correction](macros_correction.tar.gz)
+
 # Goal
 
 The goal of these exercises in to make you comfortable with the concept of macros, to be able to use the operators and to produce generic code.
